@@ -1,0 +1,27 @@
+Main IP: 103.146.202.4
+Username: root
+Password: 51f28885ce
+
+
+
+--ROLE kaukpbj 
+PAKET TYPE TENDER
+Flow
+PPK -> kaukpbj
+List
+DAFTAR Antrian Pemilihan POKJA / PP
+
+--ROLE pk
+Flow
+PPK -> kaukpbj
+List
+DAFTAR ANTRIAN PEMERIKSAAN PAKET
+
+
+--ROLE pp PEJABAT
+Flow
+PPK -> kaukpbj
+List
+DAFTAR ANTRIAN PEMERIKSAAN PAKET YANG HARUS DILENGKAPI
+
+BIKIN VIEW LIMIT PENGADAAN DI ADMINISTRATOR
