@@ -45,7 +45,7 @@
                             <td align="center"><?php echo $no; ?></td>
                             <td>{!! $value->kode !!}</td>
                             <td>{!! $value->nama !!}</td>
-                            <td>{!! $value->rRekanan->email !!}</td>
+                            <td>{!! $value->email !!}</td>
                             <td>{!! $value->alamat !!}</td>
                             <td>{!! $value->npwp !!}</td>
                             

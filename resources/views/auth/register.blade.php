@@ -76,7 +76,7 @@
         </div>
         <div class="login-footer">
             <div class="pull-left">
-                &copy; 2020 e-proc.unesa.ac.id
+                &copy; 2020 simbajanesa.unesa.ac.id
             </div>
             <div class="pull-right">
                 <a href="#">About</a> |

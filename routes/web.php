@@ -506,6 +506,9 @@ Route::group(['middleware' => 'role:pejabatpengadaan'], function () {
         //kirim undangan
         Route::post('store-undangan-kontrak','EkontrakController@storeUndanganKontrak')->name('store-undangan-kontrak');
 
+        //log akses
+        Route::get('/log_akses','AllLogcontroller@logLogin')->name('log.index');
+
         //inbox
         Route::get('/inbox','InboxController@index')->name('inbox.index');
         Route::get('/inbox/{any}','InboxController@getDataInbox')->name('inbox.read');

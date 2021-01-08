@@ -75,13 +75,14 @@ class TendersController extends Controller
         $getApproval = \DB::table('e_paket_approval')->where('paket_id',Crypt::decrypt($paket_id))
                         ->join('users','users.id','=','e_paket_approval.pokja_id')
                         ->get();
-
+        // $paket1 = Crypt::encrypt('3e11cc50-21d9-11eb-98da-9bbb34464994');
+        
         $penawaran          = \App\Models\Procurement\RekananSubmitPenawaran::where('paket_id',Crypt::decrypt($paket_id))->get();
         $rekananPenawaran   = \DB::table('v_new_penawaran_rekanan')->where('paket_id', Crypt::decrypt($paket_id))->get();
         $kriteria           = \App\Models\Procurement\EvaluasiKriterias::where('id', $paket->evaluasi_kriteria_id)->first();
         $pembukaan          =  \App\Models\Procurement\PemberianPenjelasanPembukaan::where('paket_id', Crypt::decrypt($paket_id))->first();
         $getTahapan         = \App\Models\Procurement\PaketTahapans::getTahapans(Crypt::decrypt($paket_id));
-
+        // dd($paket1);
         return view('procurement.tenders.create',compact(
             'paket',
             'jadwal',

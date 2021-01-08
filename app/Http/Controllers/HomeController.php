@@ -51,7 +51,10 @@ class HomeController extends Controller
                         ->where('pokja_id',Auth::user()->id)
                         ->where('is_public',\App\Models\Procurement\Pakets::PublishPaket)
                         ->get();
-
+            // echo "<pre>";
+            //     print_r($tender);
+            //     print_r($nontender);
+            // echo "</pre>";
             return view('home',compact('tender','nontender'));
         }elseif (Auth::user()->role == 'ppk') {
             $tender     = \DB::table('v_ppk_paket')

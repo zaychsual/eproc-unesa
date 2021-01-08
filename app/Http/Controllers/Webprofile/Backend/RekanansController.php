@@ -50,7 +50,7 @@ class RekanansController extends Controller
     {
         if (Auth::user()->role == 'admin') {
 
-            $rekanan = Rekanans::with(['rRekanan'])
+            $rekanan = Rekanans::leftJoin('users', 'mt_rekanan.id', '=', 'users.mt_rekanan_id')
                 ->orderBy('kode', 'ASC')->get();
             // $rekanan = Rekanans::orderBy('nama', 'ASC')
             //     ->join('users', 'users.mt_rekanan_id', '=', 'mt_rekanan.id')->get();
